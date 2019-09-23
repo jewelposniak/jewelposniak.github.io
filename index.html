@@ -18,18 +18,42 @@
   </head>
 
     <!-- <script type="text/javascript" src="bundle.js"></script> -->
-    <h1>jewel posniak</h1>
+    <h1 id="demo"></h1>
 
-  <body>
+  <body onload = "typeWriter(); setTimeout(typeWriter1, 1500);">
       <div class="ui center aligned container">
           <i class="big inverted github icon" onclick="window.location.href='http://www.github.com/jewelposniak'"></i>
           <i class="big inverted linkedin icon" onclick="window.location.href='https://www.linkedin.com/in/jewel-posniak/'"></i>
       </div>
 
-      <h2 onclick = "window.location.href='https://drive.google.com/file/d/1nNBpYbdCYYPgDTiw97XfpMFI7Vd2DnDl/view?usp=sharing'">updated resume</h2>
+      <h2 id="demo1" onclick = "window.location.href='https://drive.google.com/file/d/1nNBpYbdCYYPgDTiw97XfpMFI7Vd2DnDl/view?usp=sharing'"></h2>
 
 
   </body>
     <script src="./public/stylesheets/Semantic-UI-CSS-master/semantic.js"></script>
+    <script>
+var i = 0;
+var txt = 'jewel posniak';
+var speed = 150;
 
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+var j = 0;
+var txt1 = 'updated resume';
+var speed1 = 125;
+
+function typeWriter1() {
+  if (j < txt1.length) {
+    document.getElementById("demo1").innerHTML += txt1.charAt(j);
+    j++;
+    setTimeout(typeWriter1, speed1);
+  }
+}
+</script>
  </html>
